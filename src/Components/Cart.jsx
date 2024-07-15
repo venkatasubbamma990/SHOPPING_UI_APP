@@ -16,7 +16,7 @@ export default function Cart() {
   }
   return (
     <>
-    <h1 className='text-center my-4'>Cart</h1>
+    <h1 className='text-center my-4' style={{fontFamily : "serif" , fontWeight : "bold"}}>Cart</h1>
     {
       loading? (
         <div className='text-center'>
@@ -32,12 +32,12 @@ export default function Cart() {
                   </div>
                 
                 <Card.Body>
-                  <Card.Title>{product.title?.slice(0,30)}</Card.Title>
-                  <Card.Text>{product.description.slice(0,100)}</Card.Text>
-                  <Card.Text>INR : {product.price}</Card.Text>
+                  <Card.Title style={{fontFamily : "serif" , fontWeight : "bold"}}>{product.title?.slice(0,30)}</Card.Title>
+                  <Card.Text  style={{fontFamily : "initial"}}>{product.description.slice(0,100)}</Card.Text>
+                  <Card.Text style={{fontFamily : "serif"}}>INR : {product.price}</Card.Text>
                 </Card.Body>
                 <Card.Footer >
-                <div className='text-center'>
+                <div className='text-center' style={{fontFamily : "serif"}}>
                   <Button variant="primary" 
                   onClick={()=>RemoveCart(product)}
                   >
